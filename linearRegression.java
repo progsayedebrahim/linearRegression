@@ -24,10 +24,10 @@ public class linearRegression {
         SparkSession session = SparkSession.builder()
                .appName("assignment3")
                   .master("local[*]")
-                  .config("spark.sql.warehouse.dir", "file:///D://")
+                  .config("spark.sql.warehouse.dir", "file:///your directory//")
                   .getOrCreate();
     
-        Dataset<Row> training = session.read().csv("C://Users//Sayed//Documents//NetBeansProjects//boston dataset//train.csv");
+        Dataset<Row> training = session.read().csv("your dataset path");
         training.show();
         
          VectorAssembler assemblar = new VectorAssembler()
